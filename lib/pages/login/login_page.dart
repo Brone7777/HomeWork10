@@ -38,14 +38,16 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        //icon:png, background:jpg
-                        Icons.lock_outlined,
-                        size: 100.0,
-                        //color: Colors.black.withOpacity(0.5),
+                      CircleAvatar(
+                        radius: 40,
+                        child: ClipOval(
+                          child: Image.network(
+                            'assets/images/profile.jpg',
+                          ),
+                        ),
                       ),
                       Text(
-                        'LOGIN',
+                        '\nLOGIN',
                         style: Theme.of(context).textTheme.headline1,
                       ),
                       Text(
@@ -152,12 +154,10 @@ class _LoginPageState extends State<LoginPage> {
     setState(
       () {
         input = num >= 0
-            ? '$input$num'  // '$number' : interpolate
-            : (input.length > 0
-            ? input.substring(0, input.length-1)
-            : input);
-        if(input.length == 6) {
-          if(input == '123456')
+            ? '$input$num' // '$number' : interpolate
+            : (input.length > 0 ? input.substring(0, input.length - 1) : input);
+        if (input.length == 6) {
+          if (input == '123456')
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => Homepage()),
@@ -195,7 +195,7 @@ class _LoginPageState extends State<LoginPage> {
         //     //   }
         //   }
 
-          /*input = num >= 0
+        /*input = num >= 0
           ? '$input$num'  // '$number' : interpolate
           : (input.length > 0
             ? input.substring(0, input.length-1)
