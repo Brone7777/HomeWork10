@@ -132,7 +132,10 @@ class _LoginPageState extends State<LoginPage> {
           actions: [
             // ปุ่ม OK ใน dialog
             TextButton(
-              child: const Text('OK'),
+              child: const Text(
+                'OK',
+                style: TextStyle(fontSize: 20.0),
+              ),
               onPressed: () {
                 // ปิด dialog
                 Navigator.of(context).pop();
@@ -163,7 +166,7 @@ class _LoginPageState extends State<LoginPage> {
               MaterialPageRoute(builder: (context) => Homepage()),
             );
           else {
-            _showMaterialDialog('ERROR', 'Invalid PIN. Please try again.');
+            _showMaterialDialog('ERROR', 'Invalid PIN. Please try again.',);
             input = '';
           }
         }
