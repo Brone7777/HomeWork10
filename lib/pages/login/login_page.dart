@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CircleAvatar(
-                        radius: 40,
+                        radius: 45,
                         child: ClipOval(
                           child: Image.network(
                             'assets/images/profile.jpg',
@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: Theme.of(context).textTheme.bodyText2,
                       ),
                       Container(
-                        height: 42.0,
+                        height: 20.0,
                         child: SizedBox.shrink(),
                       ),
                       Row(
@@ -65,13 +65,13 @@ class _LoginPageState extends State<LoginPage> {
                             Icon(
                               Icons.circle,
                               color: Colors.blueAccent,
-                              size: 40.0,
+                              size: 32.0,
                             ),
                           for (int i = input.length; i < 6; ++i)
                             Icon(
                               Icons.circle,
                               color: Colors.blueAccent.withOpacity(0.2),
-                              size: 40.0,
+                              size: 32.0,
                             )
                         ],
                       )
@@ -149,7 +149,7 @@ class _LoginPageState extends State<LoginPage> {
   }*/
 
   void _handleClickButton(int num) {
-    print('hello $num');
+    //print('hello $num');
 
     setState(
       () {
