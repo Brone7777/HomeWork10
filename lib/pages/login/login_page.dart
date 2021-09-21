@@ -21,8 +21,8 @@ class _LoginPageState extends State<LoginPage> {
           gradient: LinearGradient(
             // ไล่เฉดจากมุมบนซ้ายไปมุมล่างขวาของ Container
 
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
             // ไล่เฉดจากสีแดงไปสีน้ำเงิน
             colors: [
               Colors.lightBlue.shade50,
