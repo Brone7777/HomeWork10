@@ -21,6 +21,19 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: Colors.blue,
       ),
       body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            // ไล่เฉดจากมุมบนซ้ายไปมุมล่างขวาของ Container
+
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            // ไล่เฉดจากสีแดงไปสีน้ำเงิน
+            colors: [
+              Colors.lightBlue.shade50,
+              Colors.blueAccent.shade100,
+            ],
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -31,27 +44,6 @@ class _HomepageState extends State<Homepage> {
                   'Homepage',
                   style: GoogleFonts.kanit(fontSize: 50.0, color: Colors.pink),
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.all(15.0),
-                //   child: Row(
-                //     children: [
-                //
-                //         for (int i = 0; i < 5; ++i)
-                //           Icon(
-                //             Icons.circle, // รูปไอคอน
-                //             size: 30.0, // ขนาดไอคอน
-                //             color: Colors.brown, // สีไอคอน
-                //           ),
-                //       for(int i = 0,p=0 ; i < 5-p ; ++i,++p)
-                //
-                //           Icon(
-                //             Icons.circle_outlined, // รูปไอคอน
-                //             size: 30.0, // ขนาดไอคอน
-                //             color: Colors.brown, // สีไอคอน
-                //           ),
-                //     ],
-                //   ),
-                //),
               ],
             ),
           ],
