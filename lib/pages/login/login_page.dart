@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food/pages/Homepage.dart';
 
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -41,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                       CircleAvatar(
                         radius: 45,
                         child: ClipOval(
-                          child: Image.network(
+                          child: Image.asset( //.asset ใช้กับมืถือ .network ใช้กับพวกเว็ป
                             'assets/images/profile.jpg',
                           ),
                         ),
