@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food/pages/Homepage.dart';
-
+import 'package:numeric_keyboard/numeric_keyboard.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -93,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: row.map((item) {
                         return Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: LoginButton(
                             //Right Click -> Refactor -> Extract Flutter Widget <Create new Class>
                             number: item,
@@ -252,7 +252,8 @@ class LoginButton extends StatelessWidget {
             ? null
             : BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(width: 2.0),
+                border: Border.all(width: 1.0),
+                // color: Colors.grey,
                 //border width 0.0 : 1px of device (hair line)
               ),
         child: Center(
